@@ -1,11 +1,11 @@
 {
     "name": "levitarmouse/kiss-rest-framework",
     "description": "kiss-rest and kiss-orm",
-    "type": "metapackage"
+    "type": "metapackage",
     "require": {
         "php": "^5.6 || ^7.0",
-        "levitarmouse/core": "1.0.0.*",
-        "levitarmouse/kiss-rest": "1.0.*"
+        "levitarmouse/core": "1.1.*",
+        "levitarmouse/kiss-orm": "1.1.*"
     },
     "authors": [
         {
