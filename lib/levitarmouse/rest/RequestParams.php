@@ -10,40 +10,36 @@
 
 namespace levitarmouse\rest;
 
-class RestParams
+class RequestParams
 {
     protected $params;
 
     public function __construct($data, $method = '')
     {
-//        if ($method == 'GET' || $method == 'POST') {
         if ($method == 'GET') {
             $querystring = $data;
 
-            if (isset($querystring['params'])) {
-                if (is_string($querystring['params'])) {
+//            if (isset($querystring['params'])) {
+//                if (is_string($querystring['params'])) {
+                if (is_string($querystring)) {
                     $data = json_decode($querystring['params']);
-            }
-//            if (is_string($querystring)) {
-            }
+                }
+//            }
         }
 
-//        $params = new \stdClass();
-        $params = new \levitarmouse\core\Object();
-        if ($data) {
-            foreach ($data as $key => $value) {
-                $params->$key = $value;
-            }
+//        $params = new \levitarmouse\core\Object();
+        $params = new \levitarmouse\core\SmartObject();
+        if (is_array($data) || is_object($data)) {
+            $params = $params->analize($data);
+//            foreach ($data as $key => $value) {
+//                $params->$key = $value;
+//            }
         }
         $this->params = $params;
-//        $this->returnParams();
     }
 
     public function getParams($method = '') {
 
-//        if ($method == 'GET') {
-//
-//        }
         return $this->params;
     }
 }
