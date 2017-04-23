@@ -16,8 +16,8 @@
     "minimum-stability": "dev",
     "require": {
         "php" : ">=5.3.3",
-        "levitarmouse/kiss-rest": "dev-dev",
-        "levitarmouse/kiss-orm": "dev-dev"
+        "levitarmouse/kiss_rest": "dev-dev",
+        "levitarmouse/kiss_orm": "dev-dev"
     },
     "authors": [
         {
