@@ -1,16 +1,40 @@
 {
-    "name": "levitarmouse/kiss-rest-framework",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/levitarmouse/KISS-ORM"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/levitarmouse/KISS-REST"
+        }
+    ],
+    "name": "levitarmouse/kiss-framework",
     "description": "kiss-rest and kiss-orm",
+    "license": "proprietary",
     "type": "project",
+    "minimum-stability": "dev",
     "require": {
-        "php": "^5.6 || ^7.0",
-        "levitarmouse/core": "1.1.*",
-        "levitarmouse/kiss-orm": "1.1.*"
+        "php" : ">=5.3.3",
+        "levitarmouse/kiss-orm": "dev-dev",
+        "levitarmouse/kiss-orm": "dev-dev"
     },
     "authors": [
         {
-           "name": "gabriel",
+            "name": "Gabriel Prieto",
            "email": "levitarmouse@gmail.com"
         }
-    ]
+    ],
+    "scripts": {
+        "post-update-cmd":  ["php -r \"shell_exec('mkdir -p config/kissorm');\"",
+                             "php -r \"shell_exec('ln -s ./vendor/levitarmouse/kiss_orm/tables.ini .');\"",
+                             "php -r \"shell_exec('ln -s ./vendor/levitarmouse/kiss_orm/kissGen.php .');\"",
+                             "php -r \"shell_exec('cd ./config/kissorm/; ln -s ../../vendor/levitarmouse/kiss_orm/config/Bootstrap.php .');\"",
+                             "php -r \"shell_exec('cd ./config/kissorm/; ln -s ../../vendor/levitarmouse/kiss_orm/config/database.ini .');\"",
+                             ""],
+        "post-package-install": [],
+        "post-install-cmd": [],
+        "post-autoload-dump": [],
+        "post-create-project-cmd": []
+    }
 }
