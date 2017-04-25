@@ -26,7 +26,7 @@
         }
     ],
     "scripts": {
-        "post-update-cmd":  ["chmod 775 ./scripts/kissfrmw_post_install.sh;", "./scripts/kissfrmw_post_install.sh;",
+        "post-update-cmd":  ["chmod 775 ./config/kissframework/scripts/kissfrmw_post_install.sh;", "./config/kissframework/scripts/kissfrmw_post_install.sh;",
                              ""],
         "post-package-install": [""],
         "post-install-cmd": [""],

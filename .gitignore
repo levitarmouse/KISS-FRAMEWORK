@@ -1,8 +1,7 @@
-/nbproject/*
+/config/kissrest
+/config/kissorm
 /vendor/*
-/config/*
-composer.lock
-/tables.ini
 /index.php
 /kissGen.php
 /.htaccess
+/nbproject
