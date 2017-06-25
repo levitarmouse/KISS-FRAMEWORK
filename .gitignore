@@ -7,3 +7,8 @@
 /.htaccess
 /nbproject
 /descriptors
+/tables.ini
+/composer.lock
+/kissfrmw_post_install.php
+/rest_post_install.php
+/orm_post_install.php
