@@ -4,12 +4,23 @@ Gestión de API con acceso a modelo de datos basado en Mysql.
 Integración de KISS-REST y KISS-ORM.
 
 Nota: No es un generador de Vistas!*
+Surge como alternativa ligera para proveer de datos aplicaciones WEB tipo (SPA) SinglePageApplication
+
+Através de KissRest y KissOrm
+Tiene soporte para :
+    Objetos de uso común:
+        Iteradores
+        Validación de datos
+    Validaciones contra CSRF
+    Validaciones contra XSS
+    ORM con Mecanismo anti SqlInjection
+    Acceso a Mysql a través de ORM tipo Active Record
 
 Instalación:
+En el raíz de tu WebServer:
+composer create-project levitarmouse/kiss-framework kissf "dev-dev"
 
-/var/www/ composer create-project levitarmouse/kiss-framework kissf "dev-dev"
-
-Proximamente: (Validación XSS y CSRF), (Soporte OracleDB, MongoDB a también a través de KISS-ORM)
+Proximamente: Soporte OracleDB y MongoDB también a través de KISS-ORM.
 
 La instalación límpia ya presenta un controlador que es capaz de manejar todas las peticiones
 HTTP. Sin embargo el uso esperado es que cree sus propios controladores y en ellos implemente
