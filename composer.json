@@ -33,9 +33,9 @@
                              "php -f kissfrmw_post_install.php",
                              "php -f orm_post_install.php",
                              "php -f rest_post_install.php"],
-        "post-package-install": [""],
-        "post-install-cmd": [""],
-        "post-autoload-dump": [""],
-        "post-create-project-cmd": [""]
+        "post-package-install": [],
+        "post-install-cmd": [],
+        "post-autoload-dump": [],
+        "post-create-project-cmd": []
     }
 }
