@@ -1,14 +1,9 @@
-/App/*
-/config/kissrest
-/config/kissorm
+/App/controllers/DemoKiss*
+/scripts/kiss*
 /vendor/*
 /index.php
-/kissGen.php
-/.htaccess
+/ormKissGen.php
 /nbproject
-/descriptors
-/tables.ini
-/composer.lock
 /kissfrmw_post_install.php
 /rest_post_install.php
 /orm_post_install.php

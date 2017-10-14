@@ -29,7 +29,6 @@
         "post-update-cmd":  ["php -r \"copy('./scripts/kissfrmw_post_install.php', './kissfrmw_post_install.php');\"",
                              "php -r \"copy('./vendor/levitarmouse/kiss_orm/scripts/post_install.php', './orm_post_install.php');\"",
                              "php -r \"copy('./vendor/levitarmouse/kiss_rest/scripts/post_install.php', './rest_post_install.php');\"",
-                             "php -r \"sleep(2); \"",
                              "php -f kissfrmw_post_install.php",
                              "php -f orm_post_install.php",
                              "php -f rest_post_install.php"],
