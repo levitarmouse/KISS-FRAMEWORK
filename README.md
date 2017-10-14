@@ -26,8 +26,8 @@ La instalación límpia ya presenta un controlador que es capaz de manejar todas
 HTTP. Sin embargo el uso esperado es que cree sus propios controladores y en ellos implemente
 la lógica que necesita su API.
 
-Para crear un nuevo controlador, solo dirijase a la carpeta /App/controllers
-y cree allí una clase con el nombre que desee, no hay restricciones para los 
+Para crear sus controladores dirijase a la carpeta /App/controllers
+y genere allí una clase con el nombre que desee, no hay restricciones para los 
 nombres de las classes más que las impuestas por PHP.
 
 La clase debe pertenecer al namespace: controllers
@@ -56,23 +56,23 @@ class MensajeController {
 }
 ?>
 
-Para poder acceder a dicho controlador, debes registrarlo. (1)
+Para poder acceder a dicho controlador, debes registrarlo. (*)
 
-Y para acceder a sus funciones también debes configurar!
-Debes asociar los métodos de la clase controladora a los distintos métodos HTTP (2).
+Y para acceder a sus funciones debes configurar el ruteo a ellas!
+Debes asociar los métodos de la clase controladora a los distintos métodos HTTP (**).
 Ver: https://es.wikipedia.org/wiki/Hypertext_Transfer_Protocol
 Nota: Esto lo haces en el archivo de configuración /config/kissrest/rest.ini
 
-(1)
+(*)
 En la sección [CONTROLLERS_ROUTING]
-Asocias el nombre de la entidad requerida en la URL con el controlador que la atenderá
+Asocias el nombre del endpoint de la URL con el controlador que la atenderá.
 
-(2)
+(**)
 En la sección [METHODS_ROUTING]
-Indicas la entidad asociandola al HTTP Method con un @.
-El valor de cada registro es el nombre del método que atenderá e HTTP Method
+Asocias el endpoint al HTTP Method con un @.
+El valor de cada registro es el nombre del método que atenderá el HTTP Method indicado
 
-Por ejemplo, para el caso del Controller MensajeController ejemplificado arriba podría ser:
+Por ejemplo, para el caso del Controller MensajeController ejemplificado al principio sería:
 
 [CONTROLLERS_ROUTING]
 /mensaje = "MensajeController"
@@ -81,8 +81,16 @@ Por ejemplo, para el caso del Controller MensajeController ejemplificado arriba 
 /mensaje@GET = 'saludo'
 
 Luego podrás ver el resultado accediendo a http://localhost/kissf/mensaje
+(suponiendo que has creado el proyecto en la subcarpeta "kissf" en la carpeta root de tú WebServer)
 
-También es parte de la instalación un sencillo controlador que devuelve la fecha y hora de PHP.
-Solo informativo, pero seguro evolucionará en un microservicio de calendario
+También es parte de la instalación, un sencillo controlador que devuelve la fecha y hora según PHP
+y según la base de datos, obviamente luego de haber configurado las credenciales de acceso a ella!.
+Es solo ilustrativo para tener disponible un sencillo ejemplo de acceso a consultas a las DB.
+
+En la carpeta que contiene el código de KISS-ORM (vendor/levitarmouse/kiss_orm/example)
+se puede hallar un ejemplo de base de datos
+para probar el acceso según el ejemplo de configuración incluido!
+
+
 
 Todos los ejemplos cumplen solo esa función, pueden ser descartados.
