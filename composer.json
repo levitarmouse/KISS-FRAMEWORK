@@ -17,7 +17,6 @@
     "require": {
         "php" : ">=5.6",
         "levitarmouse/kiss_rest": "dev-beta1",
-        "levitarmouse/kiss_restql": "dev-beta1",
         "levitarmouse/kiss_orm": "dev-beta1"
     },
     "authors": [
