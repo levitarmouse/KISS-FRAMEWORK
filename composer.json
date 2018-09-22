@@ -15,10 +15,10 @@
     "type": "project",
     "minimum-stability": "dev",
     "require": {
-        "php" : ">=5.3.3",
-        "levitarmouse/kiss_rest": "dev-dev",
-        "levitarmouse/kiss_restql": "dev-dev",
-        "levitarmouse/kiss_orm": "dev-dev"
+        "php" : ">=5.6",
+        "levitarmouse/kiss_rest": "dev-beta1",
+        "levitarmouse/kiss_restql": "dev-beta1",
+        "levitarmouse/kiss_orm": "dev-beta1"
     },
     "authors": [
         {
