@@ -17,6 +17,7 @@
     "require": {
         "php" : ">=5.3.3",
         "levitarmouse/kiss_rest": "dev-dev",
+        "levitarmouse/kiss_restql": "dev-dev",
         "levitarmouse/kiss_orm": "dev-dev"
     },
     "authors": [
