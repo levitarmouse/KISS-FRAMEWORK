@@ -1,0 +1,41 @@
+{
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/levitarmouse/KISS-ORM"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/levitarmouse/KISS-REST"
+        }
+    ],
+    "name": "levitarmouse/kiss-framework",
+    "description": "Levitarmouse kiss-rest and kiss-orm together.",
+    "license": "proprietary",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+        "php" : ">=5.6",
+        "levitarmouse/kiss_rest": "dev-beta1",
+        "levitarmouse/kiss_restql": "dev-beta1",
+        "levitarmouse/kiss_orm": "dev-beta1"
+    },
+    "authors": [
+        {
+            "name": "A. Gabriel Prieto",
+           "email": "levitarmouse@gmail.com"
+        }
+    ],
+    "scripts": {
+        "post-update-cmd":  ["php -r \"copy('./scripts/kissfrmw_post_install.php', './kissfrmw_post_install.php');\"",
+                             "php -r \"copy('./vendor/levitarmouse/kiss_orm/scripts/post_install.php', './orm_post_install.php');\"",
+                             "php -r \"copy('./vendor/levitarmouse/kiss_rest/scripts/post_install.php', './rest_post_install.php');\"",
+                             "php -f kissfrmw_post_install.php",
+                             "php -f orm_post_install.php",
+                             "php -f rest_post_install.php"],
+        "post-package-install": [],
+        "post-install-cmd": [],
+        "post-autoload-dump": [],
+        "post-create-project-cmd": []
+    }
+}
